@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'CursedTimer';
+    src: url('https://cdn.jsdelivr.net/gh/scrimba/curriculum-challenges@master/basketball-scoreboard/fonts/cursed-timer-ulil.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #1B244A;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* Activează Flexbox pe body pentru a centra conținutul în mijlocul ecranului */
+    display: flex;
+    /* Centrează elementele orizontal (pe axa principală) */
+    justify-content: center;
+    /* Centrează elementele vertical (pe axa secundară) */
+    align-items: center;
+    /* Forțează body-ul să aibă cel puțin înălțimea completă a ferestrei vizibile */
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    width: 550px;
+}
+h3 {
+    /* Culoarea alb-gri deschis a textului */
+    color: #EEEEEE;
+    /* Dimensiunea fontului */
+    font-size: 40px;
+    /* Grosimea maximă a caracterelor (foarte îngroșat) */
+    font-weight: 900;
+    /* Spațiu între litere pentru un aspect mai aerisit */
+    letter-spacing: 2px;
+    /* Spațiu gol sub titlu, până la ecranul negru al scorului */
+    margin-bottom: 20px;
+}
+
+.score {
+font-family: 'VT323', monospace;
+    font-size: 110px; /* mărit puțin pentru că VT323 are cifrele puțin mai înguste */
+    color: #F94F6D;
+    line-height: 1;
+}
+
+.buttons-group {
+    /* Așază cele trei butoane pe orizontală, unul lângă altul */
+    display: flex;
+    
+    /* Distanța automată dintre butoane */
+    gap: 10px;
+}
+button {
+background-color: transparent;
+    border: 2px solid #9AABD8;
+    border-radius: 5px;
+    color: #9AABD8;
+    font-family: 'VT323', monospace; /* fontul digital */
+    font-size: 24px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+button:hover {
+    /* Inversează culorile: fundalul devine albastru-deschis */
+    background-color: #9AABD8;
+    /* Iar textul devine bleumarin închis */
+    color: #1B244A;
+}
+
+/* În momentul exact în care apeși click pe buton */
+button:active {
+    /* Micșorează butonul cu 5% pentru un efect tactil realist de apăsare */
+    transform: scale(0.95);
+}
+.score-box {
+    background-color: #080001;
+    width: 155px;
+    height: 120px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.scoreboard-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
